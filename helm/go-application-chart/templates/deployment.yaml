@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-application
+  labels:
+    app: go-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-application
+  template:
+    metadata:
+      labels:
+        app: go-application
+    spec:
+      containers:
+      - name: go-application
+        image: eshwarearthineni/go-application:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 8080
