@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-application
-        image: eshwarearthineni/go-application:v1
+        image: eshwarearthineni/go-application:v2
         ports:
         - containerPort: 8080
